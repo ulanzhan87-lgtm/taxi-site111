@@ -147,7 +147,36 @@ font-weight:bold;
 <section class="section">
 
 <h2>Сколько можно заработать</h2>
+<div style="margin-top:30px">
 
+<p>Введите количество поездок в день:</p>
+
+<input type="number" id="rides" placeholder="Например 20">
+
+<br><br>
+
+<button onclick="calculateIncome()">Посчитать доход</button>
+
+<h3 id="result"></h3>
+
+</div>
+
+<script>
+
+function calculateIncome(){
+
+let rides = document.getElementById("rides").value;
+
+let incomeDay = rides * 1500;
+
+let incomeMonth = incomeDay * 30;
+
+document.getElementById("result").innerHTML =
+"Доход в день: " + incomeDay + " ₸ <br> Доход в месяц: " + incomeMonth + " ₸";
+
+}
+
+</script>
 <p>🚕 10 поездок в день</p>
 <p>💰 Доход до 18 000 ₸</p>
 
@@ -198,4 +227,5 @@ WhatsApp
 </body>
 
 </html>
+
 
