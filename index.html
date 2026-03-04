@@ -17,9 +17,9 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-background:white;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+padding:20px 60px;
+background:#000;
+color:white;
 }
 
 .logo{
@@ -28,9 +28,10 @@ font-weight:bold;
 }
 
 .menu a{
-margin:0 10px;
+margin:0 15px;
 text-decoration:none;
-color:black;
+color:white;
+font-weight:bold;
 }
 
 .phone{
@@ -80,17 +81,7 @@ margin:10px;
 width:250px;
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-}
+
 
 </style>
 
@@ -204,15 +195,27 @@ document.getElementById("result").innerHTML =
 
 }
 
-</script>
-<p>🚕 10 поездок в день</p>
-<p>💰 Доход до 18 000 ₸</p>
+<div class="income-cards">
 
-<p>🚕 25 поездок в день</p>
-<p>💰 Доход до 40 000 ₸</p>
+<div class="card">
+<h3>10 поездок</h3>
+<p>Доход в день</p>
+<h2>18 000 ₸</h2>
+</div>
 
-<p>🚕 В месяц</p>
-<p>💰 Доход до 550 000 ₸</p>
+<div class="card">
+<h3>25 поездок</h3>
+<p>Доход в день</p>
+<h2>40 000 ₸</h2>
+</div>
+
+<div class="card">
+<h3>Работа полный день</h3>
+<p>Доход в месяц</p>
+<h2>550 000 ₸</h2>
+</div>
+
+</div>
 
 </section>
 
@@ -247,9 +250,7 @@ height="400">
 </section>
 
 
-<a class="whatsapp" href="https://wa.me/77077784445">
-WhatsApp
-</a>
+
 
 <a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20подключиться%20к%20такси" 
 class="whatsapp-button" 
@@ -275,11 +276,30 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 .whatsapp-button:hover{
 background:#1ebe5d;
 }
+.income-cards{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+flex-wrap:wrap;
+}
 
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+width:200px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h2{
+color:#FFD600;
+}
 </style>
 </body>
 
 </html>
+
 
 
 
