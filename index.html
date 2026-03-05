@@ -103,6 +103,7 @@ color:white;
 padding:10px;
 border:none;
 cursor:pointer;
+border-radius:5px;
 }
 
 .cart-panel{
@@ -120,6 +121,37 @@ overflow:auto;
 
 .cart-panel.open{
 right:0;
+}
+
+.cart-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.close-cart{
+background:red;
+color:white;
+border:none;
+padding:6px 10px;
+cursor:pointer;
+border-radius:4px;
+}
+
+.remove-btn{
+background:red;
+color:white;
+border:none;
+padding:4px 8px;
+margin-left:10px;
+cursor:pointer;
+border-radius:4px;
+}
+
+.cart-item{
+display:flex;
+justify-content:space-between;
+margin:10px 0;
 }
 
 .whatsapp{
@@ -174,7 +206,7 @@ text-decoration:none;
 <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
 <div class="product-info">
 <h3>Nike Air Max</h3>
-<div class="price">45000</div>
+<div class="price">45000 ₸</div>
 <button class="add-btn" onclick="addToCart('Nike Air Max',45000)">В корзину</button>
 </div>
 </div>
@@ -183,7 +215,7 @@ text-decoration:none;
 <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
 <div class="product-info">
 <h3>Adidas Samba</h3>
-<div class="price">38000</div>
+<div class="price">38000 ₸</div>
 <button class="add-btn" onclick="addToCart('Adidas Samba',38000)">В корзину</button>
 </div>
 </div>
@@ -192,7 +224,7 @@ text-decoration:none;
 <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
 <div class="product-info">
 <h3>Oversize футболка</h3>
-<div class="price">12000</div>
+<div class="price">12000 ₸</div>
 <button class="add-btn" onclick="addToCart('Oversize футболка',12000)">В корзину</button>
 </div>
 </div>
@@ -201,7 +233,7 @@ text-decoration:none;
 <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
 <div class="product-info">
 <h3>Черное худи</h3>
-<div class="price">18000</div>
+<div class="price">18000 ₸</div>
 <button class="add-btn" onclick="addToCart('Черное худи',18000)">В корзину</button>
 </div>
 </div>
@@ -210,7 +242,7 @@ text-decoration:none;
 <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
 <div class="product-info">
 <h3>Street jacket</h3>
-<div class="price">32000</div>
+<div class="price">32000 ₸</div>
 <button class="add-btn" onclick="addToCart('Street jacket',32000)">В корзину</button>
 </div>
 </div>
@@ -230,7 +262,10 @@ text-decoration:none;
 
 <div class="cart-panel" id="cart">
 
+<div class="cart-header">
 <h2>Корзина</h2>
+<button class="close-cart" onclick="toggleCart()">✖</button>
+</div>
 
 <div id="cart-items"></div>
 
@@ -267,9 +302,10 @@ cart.forEach((item,index)=>{
 total+=item.price;
 
 items.innerHTML+=`
-<p>${item.name} ${item.price}₸
-<button onclick="removeItem(${index})">X</button>
-</p>
+<div class="cart-item">
+<span>${item.name} ${item.price}₸</span>
+<button class="remove-btn" onclick="removeItem(${index})">✖</button>
+</div>
 `;
 
 });
