@@ -23,7 +23,7 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:Arial;
-background:#f8f8f8;
+background:linear-gradient(180deg,#f8f8f8,#ffffff);
 }
 
 header{
@@ -53,15 +53,6 @@ color:white;
 font-weight:bold;
 }
 
-.driver-btn{
-background:#FFD600;
-color:black;
-padding:10px 20px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-}
-
 .call-btn{
 background:#FFD600;
 color:black;
@@ -69,10 +60,15 @@ padding:10px 20px;
 border-radius:6px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
+}
+
+.call-btn:hover{
+transform:scale(1.1);
 }
 
 .hero{
-height:500px;
+height:520px;
 background:url("https://images.unsplash.com/photo-1519003722824-194d4455a60c") center/cover;
 display:flex;
 align-items:center;
@@ -82,6 +78,21 @@ color:white;
 
 .hero-text{
 max-width:500px;
+animation:heroFade 1.5s ease;
+}
+
+@keyframes heroFade{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
 }
 
 .yellow{
@@ -104,11 +115,11 @@ transition:0.3s;
 }
 
 button:hover{
-transform:scale(1.05);
+transform:scale(1.08);
 }
 
 .section{
-padding:70px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
@@ -126,12 +137,39 @@ padding:30px;
 border-radius:12px;
 width:230px;
 box-shadow:0 6px 18px rgba(0,0,0,0.1);
-transition:0.3s;
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:#FFD600;
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 35px rgba(0,0,0,0.2);
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card i{
+font-size:32px;
+color:#FFD600;
+margin-bottom:10px;
+animation:iconPulse 2s infinite;
+}
+
+@keyframes iconPulse{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
+
 }
 
 .fade{
@@ -145,10 +183,18 @@ opacity:1;
 transform:translateY(0);
 }
 
-.form input{
-padding:12px;
-margin:10px;
-width:260px;
+.calculator{
+background:white;
+padding:30px;
+border-radius:12px;
+max-width:500px;
+margin:auto;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+input[type=range]{
+width:80%;
+margin-top:20px;
 }
 
 .whatsapp-button{
@@ -237,9 +283,7 @@ Taxi Almaty
 <a href="#contacts">Контакты</a>
 </div>
 
-<a href="tel:+77767784445" class="call-btn">
-📞 Позвонить
-</a>
+<a href="tel:+77767784445" class="call-btn">📞 Позвонить</a>
 
 </header>
 
@@ -248,13 +292,15 @@ Taxi Almaty
 
 <div class="hero-text">
 
-<div class="yellow">
-Доход от 550000 ₸ / месяц
-</div>
+<div class="yellow">Доход от 550000 ₸ / месяц</div>
 
 <h1>Работа водителем такси в Алматы</h1>
 
 <p>Подключаем водителей к сервису такси</p>
+
+<img src="https://cdn-icons-png.flaticon.com/512/61/61112.png" width="120">
+
+<br><br>
 
 <a href="https://wa.me/77077784445" target="_blank">
 <button>Стать водителем</button>
@@ -268,6 +314,9 @@ Taxi Almaty
 <section class="section fade" id="about">
 
 <h2>Почему работать с нами</h2>
+
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c"
+style="width:80%;max-width:600px;border-radius:12px;margin-top:30px">
 
 <div class="income-cards">
 
@@ -326,6 +375,8 @@ Taxi Almaty
 
 <h2>Калькулятор дохода</h2>
 
+<div class="calculator">
+
 <p>Выберите количество поездок</p>
 
 <input type="range" id="rides" min="5" max="40" value="20" oninput="calculateIncome()">
@@ -333,6 +384,8 @@ Taxi Almaty
 <h3 id="ridesCount">20 поездок</h3>
 
 <h3 id="result"></h3>
+
+</div>
 
 </section>
 
@@ -407,7 +460,6 @@ document.getElementById("result").innerHTML =
 
 }
 
-
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
@@ -420,7 +472,6 @@ document.querySelectorAll(".fade").forEach(el=>{
 observer.observe(el);
 });
 
-
 document.querySelectorAll(".faq-item").forEach(item=>{
 item.onclick=()=>{
 let content=item.querySelector(".faq-content");
@@ -428,7 +479,6 @@ content.style.display=
 content.style.display==="block"?"none":"block";
 };
 });
-
 
 let topBtn=document.getElementById("topBtn");
 
