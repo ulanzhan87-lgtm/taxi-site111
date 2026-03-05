@@ -7,16 +7,11 @@
 
 <title>Fashion Store Almaty | Интернет магазин одежды</title>
 
-<meta name="description" content="Интернет магазин одежды в Алматы. Футболки, худи, куртки. Быстрая доставка.">
-<meta name="keywords" content="магазин одежды алматы, купить футболку алматы, худи алматы">
+<meta name="description" content="Интернет магазин одежды в Алматы">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
-html{
-scroll-behavior:smooth;
-}
 
 body{
 margin:0;
@@ -33,26 +28,26 @@ background:#000;
 color:white;
 position:sticky;
 top:0;
-z-index:100;
 }
 
 .logo{
 font-size:22px;
 font-weight:bold;
-display:flex;
-align-items:center;
-gap:10px;
 }
 
 .menu a{
 margin:0 15px;
 text-decoration:none;
 color:white;
-font-weight:bold;
+}
+
+.cart-icon{
+cursor:pointer;
+font-size:22px;
 }
 
 .hero{
-height:500px;
+height:400px;
 background:url("https://images.unsplash.com/photo-1523381294911-8d3cead13475") center/cover;
 display:flex;
 align-items:center;
@@ -60,58 +55,31 @@ padding-left:80px;
 color:white;
 }
 
-.hero-text{
-max-width:500px;
-}
-
-.yellow{
-background:#FFD600;
-padding:10px 20px;
-display:inline-block;
-font-weight:bold;
-color:black;
-margin-bottom:20px;
-}
-
 button{
-padding:14px 30px;
+padding:12px 25px;
 background:#FFD600;
 border:none;
-font-size:16px;
 cursor:pointer;
 border-radius:6px;
-transition:0.3s;
-}
-
-button:hover{
-transform:scale(1.05);
 }
 
 .section{
-padding:80px 20px;
+padding:60px;
 text-align:center;
 }
 
 .products{
 display:flex;
+flex-wrap:wrap;
 justify-content:center;
 gap:30px;
-flex-wrap:wrap;
-margin-top:40px;
 }
 
 .product{
 background:white;
 width:240px;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-transition:0.4s;
-}
-
-.product:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,0.2);
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .product img{
@@ -125,34 +93,33 @@ padding:20px;
 }
 
 .price{
-font-size:20px;
 font-weight:bold;
 margin:10px 0;
 }
 
-.buy-btn{
-background:#000;
+.add-btn{
+background:black;
 color:white;
-padding:10px 20px;
-border-radius:6px;
-text-decoration:none;
-display:inline-block;
-margin-top:10px;
+padding:10px;
+border:none;
+cursor:pointer;
 }
 
-.buy-btn:hover{
-background:#333;
+.cart-panel{
+position:fixed;
+right:-350px;
+top:0;
+width:300px;
+height:100%;
+background:white;
+box-shadow:-5px 0 20px rgba(0,0,0,0.2);
+padding:20px;
+transition:0.4s;
+overflow:auto;
 }
 
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
+.cart-panel.open{
+right:0;
 }
 
 .whatsapp{
@@ -161,18 +128,9 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:15px;
 border-radius:50px;
-font-weight:bold;
 text-decoration:none;
-}
-
-footer{
-background:#000;
-color:white;
-text-align:center;
-padding:40px;
-margin-top:60px;
 }
 
 </style>
@@ -183,157 +141,170 @@ margin-top:60px;
 
 <header>
 
-<div class="logo">
-👕 Fashion Store
-</div>
+<div class="logo">👕 Fashion Store</div>
 
 <div class="menu">
 <a href="#catalog">Каталог</a>
-<a href="#about">О нас</a>
 <a href="#contacts">Контакты</a>
+</div>
+
+<div class="cart-icon" onclick="toggleCart()">
+🛒 <span id="cart-count">0</span>
 </div>
 
 </header>
 
-
 <section class="hero">
 
-<div class="hero-text">
-
-<div class="yellow">
-Новая коллекция
-</div>
-
+<div>
 <h1>Интернет магазин одежды</h1>
-
-<p>Футболки, худи и куртки с доставкой по Алматы</p>
-
-<a href="#catalog">
-<button>Смотреть каталог</button>
-</a>
-
+<p>Кроссовки, футболки, худи</p>
+<a href="#catalog"><button>Смотреть товары</button></a>
 </div>
 
 </section>
 
+<section class="section" id="catalog">
 
-<section class="section fade" id="catalog">
-
-<h2>Популярные товары</h2>
+<h2>Товары</h2>
 
 <div class="products">
 
 <div class="product">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+<div class="product-info">
+<h3>Nike Air Max</h3>
+<div class="price">45000</div>
+<button class="add-btn" onclick="addToCart('Nike Air Max',45000)">В корзину</button>
+</div>
+</div>
 
+<div class="product">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
+<div class="product-info">
+<h3>Adidas Samba</h3>
+<div class="price">38000</div>
+<button class="add-btn" onclick="addToCart('Adidas Samba',38000)">В корзину</button>
+</div>
+</div>
+
+<div class="product">
 <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-
 <div class="product-info">
-
 <h3>Oversize футболка</h3>
-
-<div class="price">12 000 ₸</div>
-
-<a href="https://wa.me/77077784445?text=Здравствуйте,%20хочу%20купить%20Oversize%20футболку" class="buy-btn">
-Купить
-</a>
-
+<div class="price">12000</div>
+<button class="add-btn" onclick="addToCart('Oversize футболка',12000)">В корзину</button>
 </div>
-
 </div>
-
 
 <div class="product">
-
 <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
-
 <div class="product-info">
-
 <h3>Черное худи</h3>
-
-<div class="price">18 000 ₸</div>
-
-<a href="https://wa.me/77077784445?text=Здравствуйте,%20хочу%20купить%20Черное%20худи" class="buy-btn">
-Купить
-</a>
-
+<div class="price">18000</div>
+<button class="add-btn" onclick="addToCart('Черное худи',18000)">В корзину</button>
 </div>
-
 </div>
-
 
 <div class="product">
-
 <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
-
 <div class="product-info">
-
-<h3>Куртка street style</h3>
-
-<div class="price">32 000 ₸</div>
-
-<a href="https://wa.me/77077784445?text=Здравствуйте,%20хочу%20купить%20куртку%20street%20style" class="buy-btn">
-Купить
-</a>
-
+<h3>Street jacket</h3>
+<div class="price">32000</div>
+<button class="add-btn" onclick="addToCart('Street jacket',32000)">В корзину</button>
 </div>
-
 </div>
 
 </div>
 
 </section>
 
-
-<section class="section fade" id="about">
-
-<h2>Почему выбирают нас</h2>
-
-<p>✔ качественная одежда</p>
-<p>✔ доставка по Алматы</p>
-<p>✔ быстрый заказ через WhatsApp</p>
-
-</section>
-
-
-<section class="section fade" id="contacts">
+<section class="section" id="contacts">
 
 <h2>Контакты</h2>
 
-<p>📱 WhatsApp: +7 707 778 44 45</p>
-<p>📍 Алматы</p>
+<p>WhatsApp: +7 707 778 44 45</p>
+<p>Алматы</p>
 
 </section>
 
+<div class="cart-panel" id="cart">
 
-<footer>
+<h2>Корзина</h2>
 
-<h3>Fashion Store</h3>
+<div id="cart-items"></div>
 
-<p>Интернет магазин одежды</p>
+<h3>Итого: <span id="total">0</span> ₸</h3>
 
-<p>© 2026 Fashion Store</p>
+<button onclick="checkout()">Оформить</button>
 
-</footer>
+</div>
 
-
-<a href="https://wa.me/77077784445" class="whatsapp">
-WhatsApp
-</a>
-
+<a href="https://wa.me/77077784445" class="whatsapp">WhatsApp</a>
 
 <script>
 
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
+let cart=[];
+
+function addToCart(name,price){
+
+cart.push({name,price});
+
+updateCart();
+
 }
-});
+
+function updateCart(){
+
+let items=document.getElementById("cart-items");
+
+items.innerHTML="";
+
+let total=0;
+
+cart.forEach((item,index)=>{
+
+total+=item.price;
+
+items.innerHTML+=`
+<p>${item.name} ${item.price}₸
+<button onclick="removeItem(${index})">X</button>
+</p>
+`;
+
 });
 
-document.querySelectorAll(".fade").forEach(el=>{
-observer.observe(el);
+document.getElementById("total").innerText=total;
+
+document.getElementById("cart-count").innerText=cart.length;
+
+}
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+updateCart();
+
+}
+
+function toggleCart(){
+
+document.getElementById("cart").classList.toggle("open");
+
+}
+
+function checkout(){
+
+let text="Здравствуйте, хочу заказать:%0A";
+
+cart.forEach(item=>{
+text+=item.name+" "+item.price+"₸%0A";
 });
+
+window.open("https://wa.me/77077784445?text="+text);
+
+}
 
 </script>
 
