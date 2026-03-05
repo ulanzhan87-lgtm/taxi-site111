@@ -2,20 +2,22 @@
 <html lang="ru">
 
 <head>
-<meta name="google-site-verification" content="YFd9PeB-WHx66mo680Zn1Xz2YilSn1awgkoTBmOWuKw" />
+
+<meta name="google-site-verification" content="YFd9PeB-WHx66mo680Zn1Xz2YilSn1awgkoTBmOWuKw"/>
 <meta charset="UTF-8">
-<title>Работа водителем в такси</title>
+
+<title>Работа водителем такси Алматы — доход до 550000 ₸</title>
+
 <meta name="description" content="Работа водителем такси в Алматы. Доход до 550000 тенге в месяц. Подключение водителей к сервису такси.">
-
 <meta name="keywords" content="работа такси алматы, водитель такси алматы, подключение яндекс такси, работа водителем">
-
 <meta name="robots" content="index, follow">
-
 <meta name="author" content="Taxi Almaty">
 
 <meta property="og:title" content="Работа водителем в такси Алматы">
-
 <meta property="og:description" content="Подключаем водителей к сервису такси. Доход до 550000 ₸ в месяц.">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 body{
@@ -44,8 +46,18 @@ color:white;
 font-weight:bold;
 }
 
-.phone{
+.driver-btn{
+background:#FFD600;
+color:black;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
 font-weight:bold;
+margin-left:20px;
+}
+
+.driver-btn:hover{
+background:#ffcc00;
 }
 
 .hero{
@@ -91,203 +103,26 @@ margin:10px;
 width:250px;
 }
 
-
-
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-🚕 TAXI
-</div>
-
-<div class="menu">
-<a href="#">Водителям</a>
-<a href="#">Требования</a>
-<a href="#">Контакты</a>
-
-<a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20стать%20водителем" 
-class="driver-btn" target="_blank">
-Стать водителем
-</a>
-
-</div>
-
-<div class="phone">
-📞 +7 776 778 44 45
-</div>
-
-</header>
-
-
-<section class="hero">
-
-<div class="hero-text">
-
-<div class="yellow">
-Доход от 550 000 ₸ / месяц
-</div>
-
-<h1>
-Работайте водителем в такси
-</h1>
-
-<p>
-Подключаем водителей к сервису такси
-</p>
-
-<a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20подключиться%20к%20такси" target="_blank">
-<button>
-Зарегистрироваться
-</button>
-</a>
-
-</div>
-
-</section>
-
-
-<section class="section">
-<section style="padding:60px;text-align:center;background:#f5f5f5">
-
-<h2>Почему работать с нами</h2>
-
-<div style="display:flex;justify-content:center;gap:40px;margin-top:40px;flex-wrap:wrap">
-
-<div style="width:200px">
-<h3><i class="fa-solid fa-clock"></i> Свободный график</h3>
-<p>Работайте когда удобно</p>
-</div>
-
-<div style="width:200px">
-<h3><i class="fa-solid fa-money-bill-wave"></i> Высокий доход</h3>
-<p>До 550 000 ₸ в месяц</p>
-</div>
-
-<div style="width:200px">
-<h3><i class="fa-solid fa-bolt"></i> Быстрое подключение</h3>
-<p>Начните работать уже сегодня</p>
-</div>
-
-<div style="width:200px">
-<h3><i class="fa-solid fa-headset"></i> Поддержка 24/7</h3>
-<p>Всегда поможем водителям</p>
-</div>
-
-</div>
-
-</section>
-<h2>Сколько можно заработать</h2>
-<div style="margin-top:30px">
-
-<p>Введите количество поездок в день:</p>
-
-<input type="number" id="rides" placeholder="Например 20">
-
-<br><br>
-
-<button onclick="calculateIncome()">Посчитать доход</button>
-
-<h3 id="result"></h3>
-
-</div>
-
-<script>
-
-function calculateIncome(){
-
-let rides = document.getElementById("rides").value;
-
-let incomeDay = rides * 1500;
-
-let incomeMonth = incomeDay * 30;
-
-document.getElementById("result").innerHTML =
-"Доход в день: " + incomeDay + " ₸ <br> Доход в месяц: " + incomeMonth + " ₸";
-
+.income-cards{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+flex-wrap:wrap;
 }
 
-<div class="income-cards">
-
-<div class="card">
-<h3>10 поездок</h3>
-<p>Доход в день</p>
-<h2>18 000 ₸</h2>
-</div>
-
-<div class="card">
-<h3>25 поездок</h3>
-<p>Доход в день</p>
-<h2>40 000 ₸</h2>
-</div>
-
-<div class="card">
-<h3>Работа полный день</h3>
-<p>Доход в месяц</p>
-<h2>550 000 ₸</h2>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section form">
-
-<h2>Оставить заявку</h2>
-
-<form>
-
-<input type="text" placeholder="Ваше имя"><br>
-
-<input type="text" placeholder="Телефон"><br>
-
-<button>Отправить</button>
-
-</form>
-
-</section>
-
-
-<section class="section">
-
-<h2>Мы на карте</h2>
-
-<iframe
-src="https://maps.google.com/maps?q=almaty&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="80%"
-height="400">
-</iframe>
-
-</section>
-
-
-
-
-<a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20подключиться%20к%20такси" 
-class="whatsapp-button" 
-target="_blank">
-WhatsApp
-</a>
-
-<style>
-.driver-btn{
-background:#FFD600;
-color:black;
-padding:10px 20px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-margin-left:20px;
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+width:200px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.driver-btn:hover{
-background:#ffcc00;
+.card h2{
+color:#FFD600;
 }
+
 .whatsapp-button{
 position:fixed;
 bottom:20px;
@@ -304,21 +139,7 @@ box-shadow:0 4px 10px rgba(0,0,0,0.2);
 .whatsapp-button:hover{
 background:#1ebe5d;
 }
-.income-cards{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:40px;
-flex-wrap:wrap;
-}
 
-.card{
-background:white;
-padding:30px;
-border-radius:10px;
-width:200px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
 @media (max-width:768px){
 
 header{
@@ -357,20 +178,187 @@ width:80%;
 }
 
 }
-.card h2{
-color:#FFD600;
-}
+
 </style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🚕 TAXI
+</div>
+
+<div class="menu">
+<a href="#">Водителям</a>
+<a href="#">Требования</a>
+<a href="#">Контакты</a>
+
+<a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20стать%20водителем"
+class="driver-btn" target="_blank">
+Стать водителем
+</a>
+
+</div>
+
+<div>
+📞 +7 776 778 44 45
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<div class="yellow">
+Доход от 550 000 ₸ / месяц
+</div>
+
+<h1>
+Работа водителем такси в Алматы — доход до 550000 ₸
+</h1>
+
+<p>
+Подключаем водителей к сервису такси
+</p>
+
+<a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20подключиться%20к%20такси" target="_blank">
+<button>
+Зарегистрироваться
+</button>
+</a>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Почему работать с нами</h2>
+
+<div class="income-cards">
+
+<div class="card">
+<h3><i class="fa-solid fa-clock"></i></h3>
+<p>Свободный график</p>
+</div>
+
+<div class="card">
+<h3><i class="fa-solid fa-money-bill-wave"></i></h3>
+<p>Доход до 550000 ₸</p>
+</div>
+
+<div class="card">
+<h3><i class="fa-solid fa-bolt"></i></h3>
+<p>Быстрое подключение</p>
+</div>
+
+<div class="card">
+<h3><i class="fa-solid fa-headset"></i></h3>
+<p>Поддержка 24/7</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Сколько можно заработать</h2>
+
+<p>Введите количество поездок в день:</p>
+
+<input type="number" id="rides" placeholder="Например 20">
+
+<br><br>
+
+<button onclick="calculateIncome()">Посчитать доход</button>
+
+<h3 id="result"></h3>
+
+<div class="income-cards">
+
+<div class="card">
+<h3>10 поездок</h3>
+<p>Доход в день</p>
+<h2>18 000 ₸</h2>
+</div>
+
+<div class="card">
+<h3>25 поездок</h3>
+<p>Доход в день</p>
+<h2>40 000 ₸</h2>
+</div>
+
+<div class="card">
+<h3>Полный день</h3>
+<p>Доход в месяц</p>
+<h2>550 000 ₸</h2>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section form">
+
+<h2>Оставить заявку</h2>
+
+<form>
+
+<input type="text" placeholder="Ваше имя"><br>
+<input type="text" placeholder="Телефон"><br>
+
+<button>Отправить</button>
+
+</form>
+
+</section>
+
+
+<section class="section">
+
+<h2>Мы на карте</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=almaty&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="80%"
+height="400">
+</iframe>
+
+</section>
+
+
+<a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20подключиться%20к%20такси"
+class="whatsapp-button"
+target="_blank">
+WhatsApp
+</a>
+
+
+<script>
+
+function calculateIncome(){
+
+let rides = document.getElementById("rides").value;
+
+let incomeDay = rides * 1500;
+
+let incomeMonth = incomeDay * 30;
+
+document.getElementById("result").innerHTML =
+"Доход в день: " + incomeDay + " ₸ <br> Доход в месяц: " + incomeMonth + " ₸";
+
+}
+
+</script>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
