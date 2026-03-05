@@ -3,14 +3,12 @@
 
 <head>
 
-<meta name="google-site-verification" content="YFd9PeB-WHx66mo680Zn1Xz2YilSn1awgkoTBmOWuKw"/>
 <meta charset="UTF-8">
 
-<title>Работа водителем такси Алматы — доход до 550000 ₸</title>
+<title>Fashion Store Almaty | Интернет магазин одежды</title>
 
-<meta name="description" content="Работа водителем такси в Алматы. Подключение водителей. Доход до 550000 тенге в месяц.">
-<meta name="keywords" content="работа такси алматы, водитель такси алматы, подключение яндекс такси">
-<meta name="robots" content="index, follow">
+<meta name="description" content="Интернет магазин одежды в Алматы. Футболки, худи, куртки. Быстрая доставка.">
+<meta name="keywords" content="магазин одежды алматы, купить футболку алматы, худи алматы">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -23,7 +21,7 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:Arial;
-background:linear-gradient(180deg,#f8f8f8,#ffffff);
+background:#f7f7f7;
 }
 
 header{
@@ -53,23 +51,9 @@ color:white;
 font-weight:bold;
 }
 
-.call-btn{
-background:#FFD600;
-color:black;
-padding:10px 20px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.call-btn:hover{
-transform:scale(1.1);
-}
-
 .hero{
-height:520px;
-background:url("https://images.unsplash.com/photo-1519003722824-194d4455a60c") center/cover;
+height:500px;
+background:url("https://images.unsplash.com/photo-1523381294911-8d3cead13475") center/cover;
 display:flex;
 align-items:center;
 padding-left:80px;
@@ -78,21 +62,6 @@ color:white;
 
 .hero-text{
 max-width:500px;
-animation:heroFade 1.5s ease;
-}
-
-@keyframes heroFade{
-
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
 }
 
 .yellow{
@@ -105,17 +74,17 @@ margin-bottom:20px;
 }
 
 button{
-padding:15px 35px;
+padding:14px 30px;
 background:#FFD600;
 border:none;
-font-size:18px;
+font-size:16px;
 cursor:pointer;
 border-radius:6px;
 transition:0.3s;
 }
 
 button:hover{
-transform:scale(1.08);
+transform:scale(1.05);
 }
 
 .section{
@@ -123,53 +92,56 @@ padding:80px 20px;
 text-align:center;
 }
 
-.income-cards{
+.products{
 display:flex;
 justify-content:center;
 gap:30px;
-margin-top:40px;
 flex-wrap:wrap;
+margin-top:40px;
 }
 
-.card{
+.product{
 background:white;
-padding:30px;
+width:240px;
 border-radius:12px;
-width:230px;
-box-shadow:0 6px 18px rgba(0,0,0,0.1);
-transition:0.4s;
-position:relative;
 overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.4s;
 }
 
-.card::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:4px;
-background:#FFD600;
-}
-
-.card:hover{
-transform:translateY(-12px) scale(1.03);
+.product:hover{
+transform:translateY(-10px);
 box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
-.card i{
-font-size:32px;
-color:#FFD600;
-margin-bottom:10px;
-animation:iconPulse 2s infinite;
+.product img{
+width:100%;
+height:260px;
+object-fit:cover;
 }
 
-@keyframes iconPulse{
+.product-info{
+padding:20px;
+}
 
-0%{transform:scale(1);}
-50%{transform:scale(1.2);}
-100%{transform:scale(1);}
+.price{
+font-size:20px;
+font-weight:bold;
+margin:10px 0;
+}
 
+.buy-btn{
+background:#000;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px;
+}
+
+.buy-btn:hover{
+background:#333;
 }
 
 .fade{
@@ -183,21 +155,7 @@ opacity:1;
 transform:translateY(0);
 }
 
-.calculator{
-background:white;
-padding:30px;
-border-radius:12px;
-max-width:500px;
-margin:auto;
-box-shadow:0 6px 20px rgba(0,0,0,0.1);
-}
-
-input[type=range]{
-width:80%;
-margin-top:20px;
-}
-
-.whatsapp-button{
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -209,58 +167,12 @@ font-weight:bold;
 text-decoration:none;
 }
 
-.top-btn{
-position:fixed;
-bottom:80px;
-right:20px;
-background:#000;
-color:white;
-padding:10px 14px;
-border-radius:50%;
-cursor:pointer;
-display:none;
-}
-
-.faq-item{
-background:white;
-margin:10px auto;
-padding:15px;
-max-width:500px;
-cursor:pointer;
-border-radius:8px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-}
-
-.faq-content{
-display:none;
-padding-top:10px;
-}
-
 footer{
 background:#000;
 color:white;
 text-align:center;
 padding:40px;
-margin-top:50px;
-}
-
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-gap:10px;
-}
-
-.hero{
-padding:40px;
-text-align:center;
-height:auto;
-}
-
-.hero-text{
-max-width:100%;
-}
-
+margin-top:60px;
 }
 
 </style>
@@ -272,18 +184,14 @@ max-width:100%;
 <header>
 
 <div class="logo">
-<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" width="40">
-Taxi Almaty
+👕 Fashion Store
 </div>
 
 <div class="menu">
-<a href="#about">Водителям</a>
-<a href="#calc">Доход</a>
-<a href="#faq">FAQ</a>
+<a href="#catalog">Каталог</a>
+<a href="#about">О нас</a>
 <a href="#contacts">Контакты</a>
 </div>
-
-<a href="tel:+77767784445" class="call-btn">📞 Позвонить</a>
 
 </header>
 
@@ -292,19 +200,84 @@ Taxi Almaty
 
 <div class="hero-text">
 
-<div class="yellow">Доход от 550000 ₸ / месяц</div>
+<div class="yellow">
+Новая коллекция
+</div>
 
-<h1>Работа водителем такси в Алматы</h1>
+<h1>Интернет магазин одежды</h1>
 
-<p>Подключаем водителей к сервису такси</p>
+<p>Футболки, худи и куртки с доставкой по Алматы</p>
 
-<img src="https://cdn-icons-png.flaticon.com/512/61/61112.png" width="120">
-
-<br><br>
-
-<a href="https://wa.me/77077784445" target="_blank">
-<button>Стать водителем</button>
+<a href="#catalog">
+<button>Смотреть каталог</button>
 </a>
+
+</div>
+
+</section>
+
+
+<section class="section fade" id="catalog">
+
+<h2>Популярные товары</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+
+<div class="product-info">
+
+<h3>Oversize футболка</h3>
+
+<div class="price">12 000 ₸</div>
+
+<a href="https://wa.me/77077784445?text=Здравствуйте,%20хочу%20купить%20Oversize%20футболку" class="buy-btn">
+Купить
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
+
+<div class="product-info">
+
+<h3>Черное худи</h3>
+
+<div class="price">18 000 ₸</div>
+
+<a href="https://wa.me/77077784445?text=Здравствуйте,%20хочу%20купить%20Черное%20худи" class="buy-btn">
+Купить
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+
+<div class="product-info">
+
+<h3>Куртка street style</h3>
+
+<div class="price">32 000 ₸</div>
+
+<a href="https://wa.me/77077784445?text=Здравствуйте,%20хочу%20купить%20куртку%20street%20style" class="buy-btn">
+Купить
+</a>
+
+</div>
+
+</div>
 
 </div>
 
@@ -313,152 +286,42 @@ Taxi Almaty
 
 <section class="section fade" id="about">
 
-<h2>Почему работать с нами выгодно</h2>
+<h2>Почему выбирают нас</h2>
 
-<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c"
-style="width:80%;max-width:600px;border-radius:12px;margin-top:30px">
-
-<div class="income-cards">
-
-<div class="card">
-<i class="fa-solid fa-clock"></i>
-<p>Свободный график</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-money-bill-wave"></i>
-<p>Доход до 550000 ₸</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-bolt"></i>
-<p>Быстрое подключение</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-headset"></i>
-<p>Поддержка 24/7</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section fade">
-
-<h2>Отзывы водителей</h2>
-
-<div class="income-cards">
-
-<div class="card">
-<p>"Работаю уже 6 месяцев. Доход отличный."</p>
-<b>Алексей</b>
-</div>
-
-<div class="card">
-<p>"Можно совмещать с другой работой."</p>
-<b>Данияр</b>
-</div>
-
-<div class="card">
-<p>"Подключили за один день."</p>
-<b>Марат</b>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section fade" id="calc">
-
-<h2>Калькулятор дохода</h2>
-
-<div class="calculator">
-
-<p>Выберите количество поездок</p>
-
-<input type="range" id="rides" min="5" max="40" value="20" oninput="calculateIncome()">
-
-<h3 id="ridesCount">20 поездок</h3>
-
-<h3 id="result"></h3>
-
-</div>
-
-</section>
-
-
-<section class="section fade" id="faq">
-
-<h2>Часто задаваемые вопросы</h2>
-
-<div class="faq-item">
-<b>Сколько можно заработать?</b>
-<div class="faq-content">До 550000 ₸ в месяц.</div>
-</div>
-
-<div class="faq-item">
-<b>Можно ли без машины?</b>
-<div class="faq-content">Да, есть аренда автомобилей.</div>
-</div>
-
-<div class="faq-item">
-<b>Когда можно начать?</b>
-<div class="faq-content">Сразу можно приступать к заказам.</div>
-</div>
+<p>✔ качественная одежда</p>
+<p>✔ доставка по Алматы</p>
+<p>✔ быстрый заказ через WhatsApp</p>
 
 </section>
 
 
 <section class="section fade" id="contacts">
 
-<h2>Мы на карте</h2>
+<h2>Контакты</h2>
 
-<iframe
-src="https://maps.google.com/maps?q=almaty&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="80%"
-height="400">
-</iframe>
+<p>📱 WhatsApp: +7 707 778 44 45</p>
+<p>📍 Алматы</p>
 
 </section>
 
 
 <footer>
 
-<h3>Taxi Almaty</h3>
+<h3>Fashion Store</h3>
 
-<p>Работа водителем такси в Алматы</p>
+<p>Интернет магазин одежды</p>
 
-<p>📞 +7 776 778 44 45</p>
-
-<p>© 2026 Taxi Almaty</p>
+<p>© 2026 Fashion Store</p>
 
 </footer>
 
 
-<a href="https://wa.me/77077784445" class="whatsapp-button">WhatsApp</a>
-
-<div class="top-btn" id="topBtn">↑</div>
+<a href="https://wa.me/77077784445" class="whatsapp">
+WhatsApp
+</a>
 
 
 <script>
-
-function calculateIncome(){
-
-let rides = document.getElementById("rides").value;
-
-document.getElementById("ridesCount").innerHTML =
-rides + " поездок";
-
-let incomeDay = rides * 1500;
-let incomeMonth = incomeDay * 30;
-
-document.getElementById("result").innerHTML =
-"Доход в день: " + incomeDay + " ₸ <br> Доход в месяц: " + incomeMonth + " ₸";
-
-}
 
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
@@ -472,32 +335,7 @@ document.querySelectorAll(".fade").forEach(el=>{
 observer.observe(el);
 });
 
-document.querySelectorAll(".faq-item").forEach(item=>{
-item.onclick=()=>{
-let content=item.querySelector(".faq-content");
-content.style.display=
-content.style.display==="block"?"none":"block";
-};
-});
-
-let topBtn=document.getElementById("topBtn");
-
-window.onscroll=function(){
-
-if(document.body.scrollTop>400||document.documentElement.scrollTop>400){
-topBtn.style.display="block";
-}else{
-topBtn.style.display="none";
-}
-
-};
-
-topBtn.onclick=function(){
-window.scrollTo({top:0,behavior:"smooth"});
-};
-
 </script>
 
 </body>
 </html>
-
