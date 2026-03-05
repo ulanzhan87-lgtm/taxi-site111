@@ -8,7 +8,7 @@
 
 <title>Работа водителем такси Алматы — доход до 550000 ₸</title>
 
-<meta name="description" content="Работа водителем такси в Алматы. Доход до 550000 тенге в месяц. Подключение водителей к сервису такси.">
+<meta name="description" content="Работа водителем такси в Алматы. Подключение водителей. Доход до 550000 тенге в месяц.">
 <meta name="keywords" content="работа такси алматы, водитель такси алматы, подключение яндекс такси">
 <meta name="robots" content="index, follow">
 
@@ -16,9 +16,14 @@
 
 <style>
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
 font-family:Arial;
+background:#f8f8f8;
 }
 
 header{
@@ -28,10 +33,13 @@ align-items:center;
 padding:20px 60px;
 background:#000;
 color:white;
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo{
-font-size:24px;
+font-size:22px;
 font-weight:bold;
 display:flex;
 align-items:center;
@@ -52,7 +60,15 @@ padding:10px 20px;
 border-radius:6px;
 text-decoration:none;
 font-weight:bold;
-margin-left:20px;
+}
+
+.call-btn{
+background:#FFD600;
+color:black;
+padding:10px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
 }
 
 .hero{
@@ -69,22 +85,21 @@ max-width:500px;
 }
 
 .yellow{
-background:yellow;
-display:inline-block;
+background:#FFD600;
 padding:10px 20px;
+display:inline-block;
 font-weight:bold;
 color:black;
 margin-bottom:20px;
 }
 
 button{
-margin-top:20px;
 padding:15px 35px;
 background:#FFD600;
 border:none;
 font-size:18px;
 cursor:pointer;
-border-radius:5px;
+border-radius:6px;
 transition:0.3s;
 }
 
@@ -93,14 +108,8 @@ transform:scale(1.05);
 }
 
 .section{
-padding:60px;
+padding:70px 20px;
 text-align:center;
-}
-
-.form input{
-padding:10px;
-margin:10px;
-width:250px;
 }
 
 .income-cards{
@@ -114,19 +123,32 @@ flex-wrap:wrap;
 .card{
 background:white;
 padding:30px;
-border-radius:10px;
-width:220px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border-radius:12px;
+width:230px;
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
 }
 
-.card h2{
-color:#FFD600;
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.form input{
+padding:12px;
+margin:10px;
+width:260px;
 }
 
 .whatsapp-button{
@@ -135,52 +157,62 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 25px;
+padding:15px 20px;
 border-radius:50px;
 font-weight:bold;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-.whatsapp-button:hover{
-background:#1ebe5d;
+.top-btn{
+position:fixed;
+bottom:80px;
+right:20px;
+background:#000;
+color:white;
+padding:10px 14px;
+border-radius:50%;
+cursor:pointer;
+display:none;
 }
 
-@media (max-width:768px){
+.faq-item{
+background:white;
+margin:10px auto;
+padding:15px;
+max-width:500px;
+cursor:pointer;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.faq-content{
+display:none;
+padding-top:10px;
+}
+
+footer{
+background:#000;
+color:white;
+text-align:center;
+padding:40px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
 
 header{
-flex-direction:column;
-gap:10px;
-padding:20px;
-}
-
-.menu{
-display:flex;
 flex-direction:column;
 gap:10px;
 }
 
 .hero{
 padding:40px;
-height:auto;
 text-align:center;
+height:auto;
 }
 
 .hero-text{
 max-width:100%;
-}
-
-.income-cards{
-flex-direction:column;
-align-items:center;
-}
-
-.card{
-width:80%;
-}
-
-.form input{
-width:80%;
 }
 
 }
@@ -199,66 +231,63 @@ Taxi Almaty
 </div>
 
 <div class="menu">
-<a href="#">Водителям</a>
-<a href="#">Требования</a>
-<a href="#">Контакты</a>
-
-<a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20стать%20водителем" class="driver-btn" target="_blank">
-Стать водителем
-</a>
+<a href="#about">Водителям</a>
+<a href="#calc">Доход</a>
+<a href="#faq">FAQ</a>
+<a href="#contacts">Контакты</a>
 </div>
 
-<div>📞 +7 776 778 44 45</div>
+<a href="tel:+77767784445" class="call-btn">
+📞 Позвонить
+</a>
 
 </header>
+
 
 <section class="hero">
 
 <div class="hero-text">
 
 <div class="yellow">
-Доход от 550 000 ₸ / месяц
+Доход от 550000 ₸ / месяц
 </div>
 
-<h1>
-Работа водителем такси в Алматы — доход до 550000 ₸
-</h1>
+<h1>Работа водителем такси в Алматы</h1>
 
-<p>
-Подключаем водителей к сервису такси
-</p>
+<p>Подключаем водителей к сервису такси</p>
 
-<a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20подключиться%20к%20такси" target="_blank">
-<button>Зарегистрироваться</button>
+<a href="https://wa.me/77077784445" target="_blank">
+<button>Стать водителем</button>
 </a>
 
 </div>
 
 </section>
 
-<section class="section">
+
+<section class="section fade" id="about">
 
 <h2>Почему работать с нами</h2>
 
 <div class="income-cards">
 
 <div class="card">
-<h3><i class="fa-solid fa-clock"></i></h3>
+<i class="fa-solid fa-clock"></i>
 <p>Свободный график</p>
 </div>
 
 <div class="card">
-<h3><i class="fa-solid fa-money-bill-wave"></i></h3>
+<i class="fa-solid fa-money-bill-wave"></i>
 <p>Доход до 550000 ₸</p>
 </div>
 
 <div class="card">
-<h3><i class="fa-solid fa-bolt"></i></h3>
+<i class="fa-solid fa-bolt"></i>
 <p>Быстрое подключение</p>
 </div>
 
 <div class="card">
-<h3><i class="fa-solid fa-headset"></i></h3>
+<i class="fa-solid fa-headset"></i>
 <p>Поддержка 24/7</p>
 </div>
 
@@ -266,83 +295,71 @@ Taxi Almaty
 
 </section>
 
-<section class="section">
+
+<section class="section fade">
 
 <h2>Отзывы водителей</h2>
 
 <div class="income-cards">
 
 <div class="card">
-<p>"Работаю уже 6 месяцев. Доход хороший."</p>
-<strong>Алексей</strong>
+<p>"Работаю уже 6 месяцев. Доход отличный."</p>
+<b>Алексей</b>
 </div>
 
 <div class="card">
-<p>"Гибкий график. Можно совмещать."</p>
-<strong>Данияр</strong>
+<p>"Можно совмещать с другой работой."</p>
+<b>Данияр</b>
 </div>
 
 <div class="card">
 <p>"Подключили за один день."</p>
-<strong>Марат</strong>
+<b>Марат</b>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
 
-<h2>Сколько можно заработать</h2>
+<section class="section fade" id="calc">
 
-<p>Выберите количество поездок в день:</p>
+<h2>Калькулятор дохода</h2>
+
+<p>Выберите количество поездок</p>
 
 <input type="range" id="rides" min="5" max="40" value="20" oninput="calculateIncome()">
 
-<h3 id="ridesCount">20 поездок в день</h3>
+<h3 id="ridesCount">20 поездок</h3>
 
 <h3 id="result"></h3>
 
 </section>
 
-<section class="section">
+
+<section class="section fade" id="faq">
 
 <h2>Часто задаваемые вопросы</h2>
 
-<div class="income-cards">
-
-<div class="card">
-<h3>Сколько можно заработать?</h3>
-<p>До 550000 ₸ в месяц.</p>
+<div class="faq-item">
+<b>Сколько можно заработать?</b>
+<div class="faq-content">До 550000 ₸ в месяц.</div>
 </div>
 
-<div class="card">
-<h3>Можно без машины?</h3>
-<p>Да, есть аренда автомобилей.</p>
+<div class="faq-item">
+<b>Можно ли без машины?</b>
+<div class="faq-content">Да, есть аренда автомобилей.</div>
 </div>
 
-<div class="card">
-<h3>Когда можно начать?</h3>
-<p>Обычно уже на следующий день.</p>
-</div>
-
+<div class="faq-item">
+<b>Когда можно начать?</b>
+<div class="faq-content">Обычно уже на следующий день.</div>
 </div>
 
 </section>
 
-<section class="section form">
 
-<h2>Оставить заявку</h2>
-
-<form>
-<input type="text" placeholder="Ваше имя"><br>
-<input type="text" placeholder="Телефон"><br>
-<button>Отправить</button>
-</form>
-
-</section>
-
-<section class="section">
+<section class="section fade" id="contacts">
 
 <h2>Мы на карте</h2>
 
@@ -354,11 +371,24 @@ height="400">
 
 </section>
 
-<a href="https://wa.me/77077784445?text=Здравствуйте!%20Хочу%20подключиться%20к%20такси"
-class="whatsapp-button"
-target="_blank">
-WhatsApp
-</a>
+
+<footer>
+
+<h3>Taxi Almaty</h3>
+
+<p>Работа водителем такси в Алматы</p>
+
+<p>📞 +7 776 778 44 45</p>
+
+<p>© 2026 Taxi Almaty</p>
+
+</footer>
+
+
+<a href="https://wa.me/77077784445" class="whatsapp-button">WhatsApp</a>
+
+<div class="top-btn" id="topBtn">↑</div>
+
 
 <script>
 
@@ -367,7 +397,7 @@ function calculateIncome(){
 let rides = document.getElementById("rides").value;
 
 document.getElementById("ridesCount").innerHTML =
-rides + " поездок в день";
+rides + " поездок";
 
 let incomeDay = rides * 1500;
 let incomeMonth = incomeDay * 30;
@@ -376,6 +406,45 @@ document.getElementById("result").innerHTML =
 "Доход в день: " + incomeDay + " ₸ <br> Доход в месяц: " + incomeMonth + " ₸";
 
 }
+
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+});
+
+document.querySelectorAll(".fade").forEach(el=>{
+observer.observe(el);
+});
+
+
+document.querySelectorAll(".faq-item").forEach(item=>{
+item.onclick=()=>{
+let content=item.querySelector(".faq-content");
+content.style.display=
+content.style.display==="block"?"none":"block";
+};
+});
+
+
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>400||document.documentElement.scrollTop>400){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+
+};
+
+topBtn.onclick=function(){
+window.scrollTo({top:0,behavior:"smooth"});
+};
 
 </script>
 
