@@ -33,6 +33,9 @@ color:white;
 .logo{
 font-size:24px;
 font-weight:bold;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .menu a{
@@ -292,32 +295,11 @@ Taxi Almaty
 
 <h2>Сколько можно заработать</h2>
 
-<p>Введите количество поездок в день:</p>
-
 <p>Выберите количество поездок в день:</p>
 
 <input type="range" id="rides" min="5" max="40" value="20" oninput="calculateIncome()">
 
-<h3 id="ridesCount">20 поездок</h3>
-
-<h3 id="result"></h3>
-
-<br><br>
-
-function calculateIncome(){
-
-let rides = document.getElementById("rides").value;
-
-document.getElementById("ridesCount").innerHTML =
-rides + " поездок в день";
-
-let incomeDay = rides * 1500;
-let incomeMonth = incomeDay * 30;
-
-document.getElementById("result").innerHTML =
-"Доход в день: " + incomeDay + " ₸ <br> Доход в месяц: " + incomeMonth + " ₸";
-
-}
+<h3 id="ridesCount">20 поездок в день</h3>
 
 <h3 id="result"></h3>
 
@@ -384,8 +366,10 @@ function calculateIncome(){
 
 let rides = document.getElementById("rides").value;
 
-let incomeDay = rides * 1500;
+document.getElementById("ridesCount").innerHTML =
+rides + " поездок в день";
 
+let incomeDay = rides * 1500;
 let incomeMonth = incomeDay * 30;
 
 document.getElementById("result").innerHTML =
@@ -397,4 +381,3 @@ document.getElementById("result").innerHTML =
 
 </body>
 </html>
-
