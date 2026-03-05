@@ -190,7 +190,10 @@ width:80%;
 
 <header>
 
-<div class="logo">🚕 TAXI</div>
+<div class="logo">
+<img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" width="40">
+Taxi Almaty
+</div>
 
 <div class="menu">
 <a href="#">Водителям</a>
@@ -291,11 +294,30 @@ width:80%;
 
 <p>Введите количество поездок в день:</p>
 
-<input type="number" id="rides" placeholder="Например 20">
+<p>Выберите количество поездок в день:</p>
+
+<input type="range" id="rides" min="5" max="40" value="20" oninput="calculateIncome()">
+
+<h3 id="ridesCount">20 поездок</h3>
+
+<h3 id="result"></h3>
 
 <br><br>
 
-<button onclick="calculateIncome()">Посчитать доход</button>
+function calculateIncome(){
+
+let rides = document.getElementById("rides").value;
+
+document.getElementById("ridesCount").innerHTML =
+rides + " поездок в день";
+
+let incomeDay = rides * 1500;
+let incomeMonth = incomeDay * 30;
+
+document.getElementById("result").innerHTML =
+"Доход в день: " + incomeDay + " ₸ <br> Доход в месяц: " + incomeMonth + " ₸";
+
+}
 
 <h3 id="result"></h3>
 
@@ -375,3 +397,4 @@ document.getElementById("result").innerHTML =
 
 </body>
 </html>
+
